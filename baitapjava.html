@@ -114,6 +114,13 @@
             position: relative;
             margin-bottom: 10px ;
         }
+        .xiu_left{
+            position: relative;
+            left:100px;
+            width:100px;
+            height:100px;
+            background-color: cyan;
+        }
     </style>
 </head>
 <body>
@@ -134,7 +141,12 @@
         </div>
         <div class="tai_xiu" >
             <div class="box_of_tai_xiu">
-                <div class="income"></div>
+                <div class="income">
+                 <div class="xiu_left">
+                     <h4> XỈU </h4>
+
+                 </div>
+                </div>
             </div>
         </div>
 
@@ -151,16 +163,13 @@
      else{
          massage.textContent =  'chua nhap ten' ;
      }
- const money2 = parseInt(localStorage.getItem('money'))
- const income = document.getElementById('income');
+ const money2 = parseInt(sessionStorage.getItem('money'));
+ let income = document.getElementById('income');
  if (money2) {
-     income.textContent = money2;
+     income.textContent =    money2;
  } else {
      income.textContent = 'Chưa nhập số tiền';
  }
-
-
-
 </script>
 </body>
 </html>
