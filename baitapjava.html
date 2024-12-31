@@ -120,6 +120,61 @@
             width:100px;
             height:100px;
             background-color: cyan;
+            top: 50px;
+        }
+        .tai_right{
+            position: relative;
+            left:800px;
+            width:100px;
+            height:100px;
+            background-color: cyan;
+            bottom:71px;
+        }
+        .centre{
+            position: absolute; ;
+            width: 601px;
+            height: 400px;
+            left:200px;
+            top:50px;
+            bottom:171px;
+            background-color: red;
+        }
+        .xiu_bet{
+            background-color: violet;
+            position: relative;
+            height: 200px;
+            top:60px;
+        }
+        .tai_bet{
+            background-color: violet;
+            position: relative;
+            height: 200px;
+            top:60px;
+        }
+        .amount{
+            border-radius: 10%;
+            border: 3px solid yellow;
+            background-color: black;
+            color:yellow;
+            width: 90px;
+            height: 40px;
+            position:absolute ;
+            margin-left: 5px;
+            text-align: center;
+            right:5px;
+        }
+        .bet{
+            border-radius: 10%;
+            border: 3px solid yellow;
+            background-color: black;
+            color:yellow;
+            width: 90px;
+            height: 40px;
+            position:absolute ;
+            margin-left: 5px;
+            text-align: center;
+            right:5px;
+            top:60px;
         }
     </style>
 </head>
@@ -144,10 +199,34 @@
                 <div class="income">
                  <div class="xiu_left">
                      <h4> XỈU </h4>
-
+                     <div class="xiu_bet">
+                         <div class="amount"><p id="xiu_amount"> </p></div>
+                         <button type="button" onclick="xiuapply" class="bet"> dat cuoc</button>
+                     </div>
                  </div>
+
                 </div>
+
+                <div class="tai_right">
+                        <h4> TÀI</h4>
+                    <div class="tai_bet">
+                        <div class="amount"><p id="tai_amount"></p></div>
+                        <button type="button" onclick="taiapply" class="bet"> dat cuoc</button>
+                    </div>
+                </div>
+                <div class="centre">
+                    <div class="3_dice">
+                        123
+                        <div class="bet_amount">
+                            <button onclick="bet1k" class="bet_amount"> 1</button>
+                          
+                            <button onclick="bet10k" class="bet_amount"> 10</button>
+                            <button onclick="bet100k" class="bet_amount"> 100</button>
+                            <button onclick="bet1000k" class="bet_amount"> 1000</button>
+                        </div>
+                    </div>
             </div>
+        </div>
         </div>
 
 
@@ -169,6 +248,10 @@
      income.textContent =    money2;
  } else {
      income.textContent = 'Chưa nhập số tiền';
+ }
+ function xiuapply(){
+     let x =  parseInt(document.getElementById('xiu_amount').value);
+
  }
 </script>
 </body>
